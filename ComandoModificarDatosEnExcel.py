@@ -59,3 +59,11 @@ pip3 install xlrd==1.2.0
 Y para crear .xlsx necesita el openpyxl:
 pip3 install openpyxl
 '''
+
+
+'''
+ejemplos:
+python3 ComandoModificarDatosEnExcel.py Sheet2 B 12 =-10.322 documentoPruebaCopia.xlsx 
+python3 ComandoModificarDatosEnExcel.py Sheet2 B 11 =100.25 documentoPruebaCopia.xlsx 
+python3 ComandoModificarDatosEnExcel.py Sheet2 B 14 '=SUM(B11:B12)' documentoPruebaCopia.xlsx 
+'''
