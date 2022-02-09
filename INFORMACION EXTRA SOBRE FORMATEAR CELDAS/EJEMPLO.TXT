@@ -1,0 +1,26 @@
+FUENTE: https://github.com/andresnino/Python/blob/master/Generar%20reporte%20en%20EXCEL/reporteEXCEL.py
+
+from openpyxl import Workbook
+from openpyxl.styles import Font, Border, Alignment, Side, PatternFill
+from arrow import utcnow
+
+
+libroTrabajo = Workbook()
+hoja = libroTrabajo.active
+
+Centrar texto:
+    centrarTexto = Alignment(horizontal="center", vertical="center")
+    celdaTitulo = hoja.cell(row=2, column=2)
+    celdaTitulo.alignment = centrarTexto
+
+tipo de letra:
+    celdaTitulo.font = Font(color="FF000000", size=11, bold=True)
+
+
+UNIR CELDAS:
+ rangoTitulo = "B2:D3"
+ hoja.merge_cells(rangoTitulo)
+
+
+'FECHA DE DESCARGA:
+        celdaFechaDescarga.value = "Fecha de descarga: {}".format(utcnow().to("local").format("DD/MM/YYYY"))
